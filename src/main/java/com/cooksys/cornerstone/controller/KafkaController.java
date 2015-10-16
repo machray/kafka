@@ -62,7 +62,7 @@ public class KafkaController {
 		KafkaResponse response = new KafkaResponse();
 		
 		try {
-			process = runtime.exec("bin/kafka-console-producer.sh --broker-list localhost:9092--topic test");
+			process = runtime.exec("bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test");
 			response.setResult(new Date().toString() + " - " + message);
 			process = runtime.exec(response.getResult());
 			process.destroy();
